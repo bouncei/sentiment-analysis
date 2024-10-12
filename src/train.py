@@ -13,6 +13,10 @@ from model import SentimentAnalysisModel
 from tensorflow.keras.callbacks import EarlyStopping
 
 def train_model(data_path, vocal_size=10000, max_len=100, batch_size=32, epochs=5):
+    """
+    This function will handle the training process, including splitting the data and using the model.
+    """
+    
     # LOADS AND PREPORCESS THE DATA
     data_preprocessor = DataPreprocessor(vocal_size=vocal_size, max_len=max_len)
     texts, labels = data_preprocessor.load_data(data_path)
