@@ -13,5 +13,10 @@ def predict_text(model_path, text):
     
     return sentiment
 
-
+# Example usage
+if __name__ == '__main__':
+    model_path = '../saved_models/sentiment_model.h5'
+    text = "This movie was amazing!"
+    sentiment = predict_text(model_path, text)
+    print(f'Sentiment: {sentiment}')
     
